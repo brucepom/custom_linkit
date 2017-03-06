@@ -1,4 +1,4 @@
-defmodule NervesSystemLinkit.Mixfile do
+defmodule CustomLinkit.Mixfile do
   use Mix.Project
 
   @version Path.join(__DIR__, "VERSION")
@@ -6,7 +6,7 @@ defmodule NervesSystemLinkit.Mixfile do
     |> String.strip
 
   def project do
-    [app: :nerves_system_linkit,
+    [app: :custom_linkit,
      version: @version,
      elixir: "~> 1.2",
      compilers: Mix.compilers ++ [:nerves_package],
@@ -33,12 +33,12 @@ defmodule NervesSystemLinkit.Mixfile do
   end
 
   defp package do
-    [maintainers: ["Frank Hunleth", "Justin Schneck"],
+    [maintainers: ["Bruce Pomeroy"],
      files: ["rootfs-additions", "LICENSE", "mix.exs", "nerves_defconfig",
        "nerves.exs", "README.md", "VERSION", "rootfs-additions", "Config.in",
        "external.mk", "package", "post-createfs.sh", "fwup.conf", "linux-4.4",
        "busybox.config", "linux-backports.defconfig"],
      licenses: ["Apache 2.0"],
-     links: %{"Github" => "https://github.com/nerves-project/nerves_system_linkit"}]
+     links: %{"Github" => "https://github.com/brucepom/custom_linkit"}]
   end
 end
